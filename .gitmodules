@@ -1,0 +1,3 @@
+[submodule "LArMachineLearningData"]
+	path = LArMachineLearningData
+	url = ./LArMachineLearningData
