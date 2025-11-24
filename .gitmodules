@@ -1,3 +1,4 @@
 [submodule "LArMachineLearningData"]
 	path = LArMachineLearningData
 	url = git@github.com:mattiasotgia/LArMachineLearningData.git
+	branch = feature/msotgia_vertexTrainingIcarus
