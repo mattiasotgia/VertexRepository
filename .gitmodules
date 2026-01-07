@@ -2,3 +2,9 @@
 	path = LArMachineLearningData
 	url = git@github.com:mattiasotgia/LArMachineLearningData.git
 	branch = feature/msotgia_vertexTrainingIcarus
+[submodule "sceStudies/toml++"]
+	path = sceStudies/toml++
+	url = https://github.com/marzer/tomlplusplus.git
+[submodule "sceStudies/CLI11"]
+	path = sceStudies/CLI11
+	url = https://github.com/CLIUtils/CLI11.git

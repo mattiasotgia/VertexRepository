@@ -8,3 +8,4 @@ This repository holds all the code/utilities/analyses relative to the implementa
 A description of the work performed, the timeline of the status of this work and details of the findings is kept in [vertexUtilities/README.md](vertexUtilities/README.md). 
 
 2. [sceStudies](sceStudies/README.md) is the TOP directory for some _parallel_ SpaceChargeEffects studies. 
+
