@@ -1,0 +1,43 @@
+############################################
+# Running pass1 DL vertex training
+# M Sotgia <msotgia@fnal.gov>
+# Nov. 6th 2025
+############################################
+
+BEGIN_PROLOG
+
+pandoraPassOneConfig: {
+    ConfigFile:             "testPass1TrainingOverlay/PandoraSettings_Training_DlVertexPass1.xml"
+    EnableMCParticles:      true
+    DisableRealDataCheck:   true
+    UseHitWidths: true
+    SimChannelModuleLabel:  "merge"
+    # SimChannelModuleLabel: "daq:simpleSC"
+}
+
+END_PROLOG
+
+# #include "stage1_run2_icarus_overlay.fcl"
+#include "stage1_run2_icarus_MC.fcl"
+# #include "stage1_run2_1d_icarus_MC.fcl"
+
+physics.producers.pandoraGausCryoE: {
+    @table::physics.producers.pandoraGausCryoE
+    @table::pandoraPassOneConfig
+}
+physics.producers.pandoraGausCryoW: {
+    @table::physics.producers.pandoraGausCryoW
+    @table::pandoraPassOneConfig
+}
+
+
+physics.reco: [ 
+                # @sequence::icarus_reco_Gauss1D_CryoE ,
+                # @sequence::icarus_reco_Gauss1D_CryoW 
+                @sequence::icarus_reco_Gauss2D_CryoE ,
+                @sequence::icarus_reco_Gauss2D_CryoW 
+              ]
+
+physics.outana: []
+
+services.message: @local::icarus_message_services_interactive_debug

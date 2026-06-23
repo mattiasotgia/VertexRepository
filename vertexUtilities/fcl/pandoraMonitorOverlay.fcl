@@ -1,0 +1,34 @@
+BEGIN_PROLOG
+
+pandoraPassOneConfig: {
+    ConfigFile:             "monitoringXml/PandoraSettings_Master_ICARUS_PandoraMonitoring.xml"
+    EnableMCParticles:      true
+    DisableRealDataCheck:   true
+    UseHitWidths:           true
+    SimChannelModuleLabel:  "merge"
+
+
+    # PrintOverallRecoStatus:     true
+}
+
+END_PROLOG
+
+#include "stage1_run2_icarus_overlay.fcl"
+
+physics.producers.pandoraGausCryoE: {
+    @table::physics.producers.pandoraGausCryoE
+    @table::pandoraPassOneConfig
+}
+physics.producers.pandoraGausCryoW: {
+    @table::physics.producers.pandoraGausCryoW
+    @table::pandoraPassOneConfig
+}
+
+physics.reco: [ 
+                @sequence::icarus_reco_Gauss2D_CryoE ,
+                @sequence::icarus_reco_Gauss2D_CryoW 
+              ]
+
+physics.outana: []
+
+services.message: @local::icarus_message_services_interactive_debug
