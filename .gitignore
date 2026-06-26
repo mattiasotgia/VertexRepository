@@ -397,3 +397,8 @@ poetry.toml
 
 # LSP config files
 pyrightconfig.json
+
+tmp/
+figures/
+
+VertexRepository.code-workspace
