@@ -10,6 +10,7 @@ echo "Executing $name"
 echo "Base dir in $base"
 
 export FW_SEARCH_PATH=/exp/icarus/app/users/msotgia/analysis/VertexRepository/vertexUtilities/:$FW_SEARCH_PATH
+export FW_SEARCH_PATH=/exp/icarus/app/users/msotgia/analysis/VertexRepository/PandoraDLData/:$FW_SEARCH_PATH
 export FHICL_FILE_PATH=/exp/icarus/app/users/msotgia/analysis/VertexRepository/vertexUtilities/fcl:$FHICL_FILE_PATH
 
 savedPathToBin="$base"
