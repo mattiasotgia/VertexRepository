@@ -5,7 +5,7 @@ target_path=""
 depth=""
 
 usage () {
-    echo "USAGE: merge_productions.sh -s <SOURCE_PATH> -t <TARGET_PATH> [-h] [-d <SEARCH_DEPTH>]"
+    echo "USAGE: copy_datasets.sh -s <SOURCE_PATH> -t <TARGET_PATH> [-h] [-d <SEARCH_DEPTH>]"
     echo " -s <SOURCE_PATH>     Path where the input files live"
     echo " -t <TARGET_PATH>     Target path where to copy datasets"
     echo " -d <SEARCH_DEPTH>    OPTIONAL: Min/max search path for the source input"
@@ -41,7 +41,7 @@ if [[ -z $target_path ]]; then
 fi
 
 if [[ -z $depth ]]; then
-    echo "Option -d <SEARCH_DEPTH> not enered, using default (3)"
+    echo "Option -d <SEARCH_DEPTH> not entered, using default (3)"
     depth="3"
 fi
 
@@ -52,12 +52,18 @@ mkdir -p "$target_path"
 
 echo "Counting files (min/max-depth = $depth) in"
 echo "source_path = $source_path"
-echo " * counted $(find "$source_path" -mindepth $depth -maxdepth $depth -name "*.csv" | wc -l) file(s)"
+file_count=$(find "$source_path" -mindepth "$depth" -maxdepth "$depth" -name "*.csv" | wc -l)
+echo " * counted $file_count file(s)"
+
+if [[ "$file_count" -eq 0 ]]; then
+    echo "No files found to copy. Exiting."
+    exit 0
+fi
 
 echo "Copying files (min/max-depth = $depth)"
 echo " * from source_path = $source_path"
 echo " * to   target_path = $target_path"
-find "$source_path" -mindepth $depth -maxdepth $depth -name "*.csv" -print0 | xargs -0 -r cp -t $target_path
+find "$source_path" -mindepth $depth -maxdepth $depth -name "*.csv" -print0 | xargs -0 -r cp -t "$target_path"
 
 
 echo "Finished copy, counting files in"
