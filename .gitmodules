@@ -1,6 +1,6 @@
 [submodule "LArMachineLearningData"]
 	path = external/LArMachineLearningData
-	url = git@github.com:mattiasotgia/LArMachineLearningData.git
+	url = https://github.com/mattiasotgia/LArMachineLearningData.git
 	branch = feature/msotgia_vertexTrainingIcarus
 [submodule "sceStudies/toml++"]
 	path = sceStudies/toml++
