@@ -1,0 +1,9 @@
+process_name: MCstage1Redo
+
+source.inputCommands: [
+    "keep *_*_*_*", 
+    "drop MCstage1_*_*_*", 
+    "drop *_MCstage1_*_*", 
+    "drop *_*_MCstage1_*", 
+    "drop *_*_*_MCstage1"
+]

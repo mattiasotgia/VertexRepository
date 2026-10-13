@@ -41,7 +41,7 @@
         <DriftStep>0.3</DriftStep>
         <VisualiseRegion>true</VisualiseRegion>
         <VisualiseClasses>true</VisualiseClasses>
-        <VisualiseColorMode>gradient</VisualiseColorMode>
+        <VisualiseColorMode>auto</VisualiseColorMode>
         
         <TrainingOutputFileName>ICARUS_DLVertexTrain_Pass2</TrainingOutputFileName>
         <InputVertexListName>NeutrinoVertices3D_Pass1</InputVertexListName>
@@ -63,7 +63,7 @@
         <DriftStep>0.3</DriftStep>
         <VisualiseRegion>true</VisualiseRegion>
         <VisualiseClasses>true</VisualiseClasses>
-        <VisualiseColorMode>gradient</VisualiseColorMode>
+        <VisualiseColorMode>auto</VisualiseColorMode>
         
         <TrainingOutputFileName>ICARUS_DLVertexTrain_Pass2</TrainingOutputFileName>
         <InputVertexListName>NeutrinoVertices3D_Pass1</InputVertexListName>
@@ -85,7 +85,7 @@
         <DriftStep>0.3</DriftStep>
         <VisualiseRegion>true</VisualiseRegion>
         <VisualiseClasses>true</VisualiseClasses>
-        <VisualiseColorMode>gradient</VisualiseColorMode>
+        <VisualiseColorMode>auto</VisualiseColorMode>
         
         <TrainingOutputFileName>ICARUS_DLVertexTrain_Pass2</TrainingOutputFileName>
         <InputVertexListName>NeutrinoVertices3D_Pass1</InputVertexListName>

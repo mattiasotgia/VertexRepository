@@ -18,6 +18,7 @@
       <CaloHitListName>CaloHitListW</CaloHitListName>
       <VisualizeMC>true</VisualizeMC>
       <GroupMCByPDG>true</GroupMCByPDG>
+      <ShowDetector>false</ShowDetector>
     </algorithm>
 
     <algorithm type = "LArDLVertexing">
