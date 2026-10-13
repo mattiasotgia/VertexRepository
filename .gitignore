@@ -399,6 +399,6 @@ poetry.toml
 pyrightconfig.json
 
 tmp/
-figures/
+plots/
 
 VertexRepository.code-workspace
