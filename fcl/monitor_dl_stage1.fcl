@@ -1,0 +1,4 @@
+#include "standard_stage1.fcl"
+
+physics.producers.pandoraGausCryoE.ConfigFile: "ThisPandoraSettings_Master_ICARUS_DL.xml"
+physics.producers.pandoraGausCryoW.ConfigFile: "ThisPandoraSettings_Master_ICARUS_DL.xml"

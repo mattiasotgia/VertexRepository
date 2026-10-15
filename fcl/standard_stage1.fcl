@@ -1,0 +1,9 @@
+// Wrapper for the default stage1_run2_icarus_MC
+
+#include "stage1_run2_icarus_MC.fcl"
+
+physics.producers.pandoraGausCryoE.EnableMCParticles: true
+physics.producers.pandoraGausCryoE.SimChannelModuleLabel:  "merge"
+
+physics.producers.pandoraGausCryoW.EnableMCParticles: true
+physics.producers.pandoraGausCryoW.SimChannelModuleLabel:  "merge"
