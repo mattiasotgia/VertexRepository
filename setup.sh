@@ -48,3 +48,6 @@ VERTEX_DATA_PATH=/exp/icarus/data/users/$USER/VertexDL/$tag/
 
 mkdir -p $VERTEX_DATA_PATH
 echo "Created \$VERTEX_DATA_PATH in $VERTEX_DATA_PATH"
+
+echo "Declaring default \$TEST_FILE_STAGE0_BNB"
+TEST_FILE_STAGE0_BNB="/pnfs/sbn/data/sbn_fd/poms_Production/mc/2026_Pandora_DL_Vertex_Variation/BNB_nue/v10_06_00_06p03/stage0/23/a9/simulation_genie_icarus_bnb_volDetEnclosure_nue_stage0_91692338_2-a25ed131-db6d-4056-be35-b6993775da79.root"
