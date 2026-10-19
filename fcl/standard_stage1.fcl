@@ -3,7 +3,11 @@
 #include "stage1_run2_icarus_MC.fcl"
 
 physics.producers.pandoraGausCryoE.EnableMCParticles: true
-physics.producers.pandoraGausCryoE.SimChannelModuleLabel:  "merge"
+# physics.producers.pandoraGausCryoE.SimChannelModuleLabel:  "merge"
+physics.producers.pandoraGausCryoE.UseHitWidths: true
+# physics.producers.pandoraGausCryoE.SimChannelModuleLabel:  "daq:simpleSC"
 
 physics.producers.pandoraGausCryoW.EnableMCParticles: true
-physics.producers.pandoraGausCryoW.SimChannelModuleLabel:  "merge"
+# physics.producers.pandoraGausCryoW.SimChannelModuleLabel:  "merge"
+physics.producers.pandoraGausCryoW.UseHitWidths: true
+# physics.producers.pandoraGausCryoW.SimChannelModuleLabel:  "daq:simpleSC"

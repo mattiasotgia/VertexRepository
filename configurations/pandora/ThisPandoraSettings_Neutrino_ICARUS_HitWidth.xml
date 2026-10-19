@@ -14,6 +14,13 @@
     <CurrentCaloHitListReplacement>CaloHitList2D</CurrentCaloHitListReplacement>
     </algorithm>
 
+    <algorithm type = "LArVisualParticleMonitoring">
+        <CaloHitListName>CaloHitListU</CaloHitListName>
+        <VisualizeMC>true</VisualizeMC>
+        <GroupMCByPDG>true</GroupMCByPDG>
+        <ShowDetector>false</ShowDetector>
+    </algorithm>
+
     <algorithm type = "LArVisualMonitoring">
         <CaloHitListNames>CaloHitListU CaloHitListV CaloHitListW</CaloHitListNames>
         <ShowDetector>false</ShowDetector>
@@ -86,6 +93,12 @@
     </algorithm>
     <algorithm type = "LArHitWidthClusterMerging"/>
 
+    <algorithm type = "LArVisualMonitoring">
+        <!-- <CaloHitListNames>CaloHitListU CaloHitListV CaloHitListW</CaloHitListNames> -->
+        <ClusterListNames>ClustersU</ClusterListNames>
+        <ShowDetector>false</ShowDetector>
+    </algorithm>
+
     <!-- VertexAlgorithms -->
     <algorithm type = "LArCutClusterCharacterisation">
         <InputClusterListNames>ClustersU ClustersV ClustersW</InputClusterListNames>
@@ -118,6 +131,12 @@
     </algorithm>
     <algorithm type = "LArVertexSplitting">
         <InputClusterListNames>ClustersU ClustersV ClustersW</InputClusterListNames>
+    </algorithm>
+
+    <algorithm type = "LArVisualMonitoring">
+        <!-- <CaloHitListNames>CaloHitListU CaloHitListV CaloHitListW</CaloHitListNames> -->
+        <ClusterListNames>ClustersU</ClusterListNames>
+        <ShowDetector>false</ShowDetector>
     </algorithm>
 
     <!-- ThreeDTrackAlgorithms -->
@@ -162,6 +181,12 @@
     <algorithm type = "LArSimpleClusterCreation" description = "ClusterRebuilding"/>
     </algorithm>
 
+    <algorithm type = "LArVisualMonitoring">
+        <!-- <CaloHitListNames>CaloHitListU CaloHitListV CaloHitListW</CaloHitListNames> -->
+        <ClusterListNames>ClustersU</ClusterListNames>
+        <ShowDetector>false</ShowDetector>
+    </algorithm>
+
     <!-- ThreeDShowerAlgorithms -->
     <algorithm type = "LArCutPfoCharacterisation">
     <TrackPfoListName>TrackParticles3D</TrackPfoListName>
@@ -188,6 +213,12 @@
         <tool type = "LArSplitShowers"/>
         <tool type = "LArSimpleShowers"/>
     </ShowerTools>
+    </algorithm>
+
+    <algorithm type = "LArVisualMonitoring">
+        <!-- <CaloHitListNames>CaloHitListU CaloHitListV CaloHitListW</CaloHitListNames> -->
+        <ClusterListNames>ClustersU</ClusterListNames>
+        <ShowDetector>false</ShowDetector>
     </algorithm>
 
     <!-- Repeat ThreeDTrackAlgorithms -->
@@ -232,6 +263,12 @@
     <algorithm type = "LArSimpleClusterCreation" description = "ClusterRebuilding"/>
     </algorithm>
 
+    <algorithm type = "LArVisualMonitoring">
+        <!-- <CaloHitListNames>CaloHitListU CaloHitListV CaloHitListW</CaloHitListNames> -->
+        <ClusterListNames>ClustersU</ClusterListNames>
+        <ShowDetector>false</ShowDetector>
+    </algorithm>
+
     <!-- ThreeDRecoveryAlgorithms -->
     <algorithm type = "LArVertexBasedPfoRecovery">
     <InputClusterListNames>ClustersU ClustersV ClustersW</InputClusterListNames>
@@ -249,6 +286,7 @@
     <MinClusterCaloHits>5</MinClusterCaloHits>
     <MinClusterLength>1.</MinClusterLength>
     </algorithm>
+    
 
     <!-- TwoDMopUpAlgorithms -->
     <algorithm type = "LArBoundedClusterMopUp">
@@ -311,6 +349,12 @@
     <AddHitsAsIsolated>true</AddHitsAsIsolated>
     </algorithm>
 
+    <algorithm type = "LArVisualMonitoring">
+        <!-- <CaloHitListNames>CaloHitListU CaloHitListV CaloHitListW</CaloHitListNames> -->
+        <ClusterListNames>ClustersU</ClusterListNames>
+        <ShowDetector>false</ShowDetector>
+    </algorithm>
+
     <!-- NeutrinoAlgorithms -->
     <algorithm type = "LArNeutrinoCreation">
     <InputVertexListName>NeutrinoVertices3D</InputVertexListName>
@@ -360,6 +404,12 @@
     </algorithm>
     <algorithm type = "LArNeutrinoProperties">
     <NeutrinoPfoListName>NeutrinoParticles3D</NeutrinoPfoListName>
+    </algorithm>
+
+    <algorithm type = "LArVisualMonitoring">
+        <!-- <CaloHitListNames>CaloHitListU CaloHitListV CaloHitListW</CaloHitListNames> -->
+        <ClusterListNames>ClustersU</ClusterListNames>
+        <ShowDetector>false</ShowDetector>
     </algorithm>
 
     <!-- Track and shower building -->
