@@ -1,6 +1,6 @@
 <pandora>
     <!-- GLOBAL SETTINGS -->
-    <IsMonitoringEnabled>true</IsMonitoringEnabled>
+    <IsMonitoringEnabled>false</IsMonitoringEnabled>
     <ShouldDisplayAlgorithmInfo>false</ShouldDisplayAlgorithmInfo>
     <SingleHitTypeClusteringMode>true</SingleHitTypeClusteringMode>
 
@@ -8,7 +8,7 @@
         <MaxAngularDiscrepancyW>1000.</MaxAngularDiscrepancyW>
     </LArTransformationPlugin>
 
-    <!-- ALGORITHM SETTINGS -->
+    <!-- PREPROCESSING WIRE INFORMATION -->
     <algorithm type = "LArPreProcessing">
         <OutputCaloHitListNameU>CaloHitListU</OutputCaloHitListNameU>
         <OutputCaloHitListNameV>CaloHitListV</OutputCaloHitListNameV>
@@ -16,10 +16,12 @@
         <FilteredCaloHitListName>CaloHitList2D</FilteredCaloHitListName>
         <CurrentCaloHitListReplacement>CaloHitList2D</CurrentCaloHitListReplacement>
     </algorithm>
-    <algorithm type = "LArVisualMonitoring">
-        <CaloHitListNames>CaloHitListU CaloHitListV CaloHitListW</CaloHitListNames>
-        <ShowDetector>true</ShowDetector>
-    </algorithm>
+
+    <!-- DEFAULT VISUAL MONITORING -->
+    <!-- <algorithm type = "LArVisualMonitoring"> -->
+        <!-- <CaloHitListNames>CaloHitListU CaloHitListV CaloHitListW</CaloHitListNames> -->
+        <!-- <ShowDetector>true</ShowDetector> -->
+    <!-- </algorithm> -->
 
     <algorithm type = "LArMaster">
         <CRSettingsFile>PandoraSettings_Cosmic_Standard.xml</CRSettingsFile>
@@ -36,13 +38,13 @@
             </tool>
         </CosmicRayTaggingTools>
         <SliceIdTools>
-	    <tool type = "LArBdtNeutrinoId">
+	        <tool type = "LArBdtNeutrinoId">
                 <MvaFileName>PandoraBdt_v08_33_00_SBND.xml</MvaFileName>
-		<MvaName>NeutrinoId</MvaName>
-		<MinimumNeutrinoProbability>0</MinimumNeutrinoProbability>
-		<MaximumNeutrinos>999</MaximumNeutrinos>
-		<PersistFeatures>true</PersistFeatures>
-	    </tool>
+		        <MvaName>NeutrinoId</MvaName>
+		        <MinimumNeutrinoProbability>0</MinimumNeutrinoProbability>
+		        <MaximumNeutrinos>999</MaximumNeutrinos>
+		        <PersistFeatures>true</PersistFeatures>
+	        </tool>
         </SliceIdTools>
         <InputHitListName>Input</InputHitListName>
         <InputMCParticleListName>Input</InputMCParticleListName>

@@ -1,6 +1,6 @@
 <pandora>
     <!-- GLOBAL SETTINGS -->
-    <IsMonitoringEnabled>true</IsMonitoringEnabled>
+    <IsMonitoringEnabled>false</IsMonitoringEnabled>
     <ShouldDisplayAlgorithmInfo>false</ShouldDisplayAlgorithmInfo>
     <SingleHitTypeClusteringMode>true</SingleHitTypeClusteringMode>
 
@@ -18,10 +18,10 @@
     </algorithm>
 
     <!-- DEFAULT VISUAL MONITORING -->
-    <algorithm type = "LArVisualMonitoring">
-        <CaloHitListNames>CaloHitListU CaloHitListV CaloHitListW</CaloHitListNames>
-        <ShowDetector>true</ShowDetector>
-    </algorithm>
+    <!-- <algorithm type = "LArVisualMonitoring"> -->
+        <!-- <CaloHitListNames>CaloHitListU CaloHitListV CaloHitListW</CaloHitListNames> -->
+        <!-- <ShowDetector>true</ShowDetector> -->
+    <!-- </algorithm> -->
 
     <!-- MASTER ALGORITHM SETTINGS -->
     <algorithm type = "LArDLMaster">
