@@ -27,6 +27,7 @@
     <algorithm type = "LArDLMaster">
         <CRSettingsFile>PandoraSettings_Cosmic_Standard.xml</CRSettingsFile>
         <NuSettingsFile>ThisPandoraSettings_Neutrino_ICARUS_DL.xml</NuSettingsFile>
+        <!-- <NuSettingsFile>ThisPandoraSettings_Neutrino_ICARUS_DL_JustTree.xml</NuSettingsFile> -->
         <SlicingSettingsFile>PandoraSettings_Slicing_Standard.xml</SlicingSettingsFile>
         <StitchingTools>
             <tool type = "LArStitchingCosmicRayMerging"><ThreeDStitchingMode>true</ThreeDStitchingMode></tool>
@@ -55,10 +56,5 @@
         <RecreatedVertexListName>RecreatedVertices</RecreatedVertexListName>
         <VisualizeOverallRecoStatus>false</VisualizeOverallRecoStatus>
         <InTimeMaxX0>2.0</InTimeMaxX0>
-    </algorithm>
-
-    <algorithm type = "LArVisualMonitoring">
-        <ShowCurrentPfos>true</ShowCurrentPfos>
-        <ShowDetector>true</ShowDetector>
     </algorithm>
 </pandora>

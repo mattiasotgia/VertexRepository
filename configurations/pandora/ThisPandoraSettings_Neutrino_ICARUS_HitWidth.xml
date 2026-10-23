@@ -428,6 +428,8 @@
         <Filename>PandoraVertexTraining_ICARUS_v10_06_00_06p03_Standard.root</Filename>
         <Treename>vertices</Treename>
         <VolumeType>icarus</VolumeType>
+        <UseVertexList>true</UseVertexList>
+        <VertexListName>NeutrinoVertices3D</VertexListName>
         <!-- <ShouldDescribeEvent>false</ShouldDescribeEvent> -->
     </algorithm>
 

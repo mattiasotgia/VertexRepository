@@ -428,6 +428,8 @@
         <Treename>vertices</Treename>
         <VolumeType>icarus</VolumeType>
         <!-- <ShouldDescribeEvent>false</ShouldDescribeEvent> -->
+        <UseVertexList>true</UseVertexList>
+        <VertexListName>NeutrinoVertices3D</VertexListName>
     </algorithm>
 
     <!-- Output list management -->
