@@ -1,0 +1,7 @@
+# File:    standard_caf.fcl
+# Purpose: CAFMaker pass for the standard chain
+# Date:    October 9th, 2026
+# Author:  Mattia Sotgia (msotgia@ge.infn.it)
+
+# include "cafmakerjob_icarus_detsim2d_systtools_and_fluxwgt.fcl"
+#include "cafmakerjob_icarus_detsim2d_systtools_and_fluxwgt.fcl"
