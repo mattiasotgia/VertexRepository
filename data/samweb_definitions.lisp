@@ -1,0 +1,9 @@
+; BNB Nue Cheated chain
+msotgia_mc_2026_pandora_DL_vertex_bnb_nue_stage1_caf_cheated_everywhere_v10_06_00_06p03
+
+; BNB NuE cheated vertex chain
+msotgia_mc_2026_pandora_DL_vertex_bnb_nue_stage1_caf_cheated_vertex_v10_06_00_06p03
+
+; BNB NuE standard (for cheating) chain
+msotgia_mc_2026_pandora_DL_vertex_bnb_nue_stage1_caf_standard_v10_06_00_06p03
+
