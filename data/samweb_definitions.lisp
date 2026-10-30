@@ -7,3 +7,14 @@ msotgia_mc_2026_pandora_DL_vertex_bnb_nue_stage1_caf_cheated_vertex_v10_06_00_06
 ; BNB NuE standard (for cheating) chain
 msotgia_mc_2026_pandora_DL_vertex_bnb_nue_stage1_caf_standard_v10_06_00_06p03
 
+; BNB NuE DL validation
+msotgia_mc_2026_pandora_DL_vertex_bnb_nue_stage1_caf_DL_v10_06_00_06p03
+
+; BNB NuMu DL Validation 
+msotgia_mc_2026_pandora_DL_vertex_bnb_numu_stage1_caf_DL_v10_06_00_06p03
+
+; BNB NuE Standard validation
+msotgia_mc_2026_pandora_DL_vertex_bnb_nue_stage1_caf_Standard_v10_06_00_06p03
+
+; BNB NuMu Standard Validation 
+msotgia_mc_2026_pandora_DL_vertex_bnb_numu_stage1_caf_Standard_v10_06_00_06p03
