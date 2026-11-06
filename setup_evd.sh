@@ -17,7 +17,8 @@ where="/exp/icarus/app/users/msotgia/devareas/dev_v10_06_00_06p03_codeFreeze/loc
 # mrbslp
 
 echo "Setting up TITUS EVD"
-source /exp/sbnd/app/users/sbnd/static_evd/setup.sh 
+# source /exp/sbnd/app/users/sbnd/static_evd/setup.sh 
+source /exp/sbnd/app/users/twester/static_evd/setup.sh
 
 echo "Importing fcl files in $script_base/fcl"
 export FHICL_FILE_PATH=$script_base/fcl:$FHICL_FILE_PATH
