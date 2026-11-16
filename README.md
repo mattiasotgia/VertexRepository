@@ -1,11 +1,34 @@
 # ICARUS DL vertex creation algorithm
 
-This repository holds all the code/utilities/analyses relative to the implementation of the DL-based vertex creation algorithm in the ICARUS Pandora-based reconstruction chain
+This repository holds all the code/utilities/analyses relative to the implementation of the DL-based vertex creation algorithm in the ICARUS Pandora-based reconstruction chain. 
+
+To start, follow the instruction reported below in [the setup section](#setting-the-repository-up-for-developments). 
+
+## Setting the repository up for developments
+
+### Setup for local testing
+
+To use the code on `icarusgpvm*` (which is required to setup analysis jobs/productions) it is required to start the SL7 container
+
+```bash
+sh /exp/$(id -ng)/data/users/vito/podman/start_SL7dev_jsl.sh
+```
+
+and source the ICARUS setup
+
+```bash
+source /cvmfs/icarus.opensciencegrid.org/products/icarus/setup_icarus.sh
+setup sam_web_client
+```
+
+Once done, the setup of most of the code here is performed with 
+```bash
+source setup.sh
+```
+
+### Setup for 
+
 
 ## Subdirectories
 
-1. [LArMachineLearningData](https://github.com/mattiasotgia/LArMachineLearningData) containes all the required code to be able to train the ML algorithms inside Pandora. The documentation is all contained inside. \
-A description of the work performed, the timeline of the status of this work and details of the findings is kept in [vertexUtilities/README.md](vertexUtilities/README.md). 
-
-2. [sceStudies](sceStudies/README.md) is the TOP directory for some _parallel_ SpaceChargeEffects studies. 
 

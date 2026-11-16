@@ -23,7 +23,7 @@
 #include <utility>
 #include <vector> 
 
-namespace analysis
+namespace Analysis
 {
     template <class T>
     class Analysis 

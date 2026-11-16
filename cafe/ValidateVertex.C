@@ -12,5 +12,9 @@
 void ValidateVertex() 
 {
 
+    Analysis::Analysis ValidateVertexAna("VertexValidation");
+
+    ValidateVertexAna.AddDataset("");
+
     return;
 }
