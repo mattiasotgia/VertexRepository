@@ -57,5 +57,9 @@ namespace ana
     const TruthCut kVertexInFV ([](const caf::SRTrueInteractionProxy* nu) -> bool {
         return kIsInFV(&(nu->position));
     });
+
+    const Cut kRecoVertexInFV ([](const caf::SRSliceProxy *slc) -> bool {
+        return kIsInFV(&(slc->vertex));
+    });
 }
 

@@ -40,14 +40,7 @@ namespace ana
         Var var = kCounting;
     };
 
-    const Var kVarFromTruthVar (const TruthVar &truthVar)
-    {
-        return Var([&](const caf::SRSliceProxy *slice) -> double {
-            return truthVar(&(slice->truth));
-        });
-    }
-
-    template<class T>
+    template<class T, bool is_reco_from_truth = false>
     const SpillMultiVar kGetIfPreselection(const T &what,
                                         const Cut cut = kNoCut,
                                         const TruthCut truth_cut = kNoTruthCut)
@@ -55,28 +48,49 @@ namespace ana
         return SpillMultiVar([what, cut, truth_cut](const caf::SRSpillProxy *sr) -> std::vector<double> {
             std::vector<double> ret_v;
 
-            if constexpr (std::is_same<T, Var>::value)
+            if constexpr (!is_reco_from_truth)
             {
-                for (auto const& slc : sr->slc)
+                if constexpr (std::is_same<T, Var>::value)
                 {
-                    if (!cut(&slc) || !truth_cut(&(slc.truth)))
-                        continue;
-                    ret_v.push_back(static_cast<double>(what(&slc)));
+                    for (auto const& slc : sr->slc)
+                    {
+                        if (!cut(&slc) || !truth_cut(&(slc.truth)))
+                            continue;
+                        ret_v.push_back(static_cast<double>(what(&slc)));
+                    }
                 }
-            }
-            else if constexpr (std::is_same<T, TruthVar>::value)
-            {
-                for (auto const& nu : sr->mc.nu)
+                else if constexpr (std::is_same<T, TruthVar>::value)
                 {
-                    if (!truth_cut(&nu))
-                        continue;
-                    ret_v.push_back(static_cast<double>(what(&nu)));
+                    for (auto const& nu : sr->mc.nu)
+                    {
+                        if (!truth_cut(&nu))
+                            continue;
+                        ret_v.push_back(static_cast<double>(what(&nu)));
+                    }
+                }
+                else
+                {
+                    static_assert(!std::is_same<T, T>::value, "T must be ana::Var or ana::TruthVar");
                 }
             }
             else
             {
-                static_assert(!std::is_same<T, T>::value, "T must be ana::Var or ana::TruthVar");
+                if constexpr (std::is_same<T, TruthVar>::value)
+                {
+                    for (auto const& slc : sr->slc)
+                    {
+                        if (!cut(&slc) || !truth_cut(&(slc.truth)))
+                            continue;
+                        ret_v.push_back(static_cast<double>(what(&(slc.truth))));
+                    }
+                }
+                else
+                {
+                    static_assert(is_reco_from_truth && !std::is_same<T, T>::value, 
+                        "Given that is_reco_from_truth, T must be ana::TruthVar");
+                }
             }
+            
             return ret_v;
         });
     }
