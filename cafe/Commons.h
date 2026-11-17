@@ -38,7 +38,7 @@ namespace ana
         std::string name = "";
         std::string label = "";
         Var var = kCounting;
-    }
+    };
 
     const Var kVarFromTruthVar (const TruthVar &truthVar)
     {
@@ -48,30 +48,34 @@ namespace ana
     }
 
     template<class T>
-    const SpillMultiVar kGetIfPreselection (const T &what, const Cut cut = kNoCut, const TruthCut truth_cut = kNoTruthCut)
+    const SpillMultiVar kGetIfPreselection(const T &what,
+                                        const Cut cut = kNoCut,
+                                        const TruthCut truth_cut = kNoTruthCut)
     {
-        return SpillMultiVar([&](const caf::SRSpillProxy *sr) -> std::vector<double> {
+        return SpillMultiVar([what, cut, truth_cut](const caf::SRSpillProxy *sr) -> std::vector<double> {
             std::vector<double> ret_v;
 
-            if (std::is_same<T, Var>::value)
+            if constexpr (std::is_same<T, Var>::value)
             {
-                for (auto const slc: sr->slc)
+                for (auto const& slc : sr->slc)
                 {
                     if (!cut(&slc) || !truth_cut(&(slc.truth)))
                         continue;
-
                     ret_v.push_back(static_cast<double>(what(&slc)));
                 }
-            } 
-            else if (std::is_same<T, TruthVar>::value)
+            }
+            else if constexpr (std::is_same<T, TruthVar>::value)
             {
-                for (auto const nu: sr->mc.nu)
+                for (auto const& nu : sr->mc.nu)
                 {
                     if (!truth_cut(&nu))
                         continue;
-                    
                     ret_v.push_back(static_cast<double>(what(&nu)));
                 }
+            }
+            else
+            {
+                static_assert(!std::is_same<T, T>::value, "T must be ana::Var or ana::TruthVar");
             }
             return ret_v;
         });

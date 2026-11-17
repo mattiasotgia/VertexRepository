@@ -54,7 +54,7 @@ namespace ana
             ( z > -894.95 + 5 && z < 894.95 - 5 ) ));
     }
 
-    const TurthCut kVertexInFV ([](const caf::SRTrueInteractionProxy* nu) -> bool {
+    const TruthCut kVertexInFV ([](const caf::SRTrueInteractionProxy* nu) -> bool {
         return kIsInFV(&(nu->position));
     });
 }

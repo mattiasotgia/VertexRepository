@@ -31,9 +31,10 @@ namespace ana
     const double VISIBILITY_THRESHOLD_PI = 0.025; // Minimum energy for pions (charged) [GeV]
     const int CALO_PLANE = 2; // Use collection plane for calorimetry
 
-    const Var kSlcVX = SIMPLEVAR(vertex.x);
-    const Var kSlcVY = SIMPLEVAR(vertex.y);
-    const Var kSlcVZ = SIMPLEVAR(vertex.z);
+    // ooOOoooOOoooOOoo Slice variables ooOOoooOOoooOOoo
+    const Var kSlcVertexX = SIMPLEVAR(vertex.x);
+    const Var kSlcVertexY = SIMPLEVAR(vertex.y);
+    const Var kSlcVertexZ = SIMPLEVAR(vertex.z);
     
     const Var kIndex = SIMPLEVAR(truth.index);
     const Var kTMatchEff = SIMPLEVAR(tmatch.eff);
@@ -42,6 +43,10 @@ namespace ana
     const TruthVar kIsCC = SIMPLETRUTHVAR(iscc);
     const TruthVar kPdg = SIMPLETRUTHVAR(pdg);
     const TruthVar kTrueE = SIMPLETRUTHVAR(E);
+
+    const TruthVar kNuVertexX = SIMPLETRUTHVAR(position.x);
+    const TruthVar kNuVertexY = SIMPLETRUTHVAR(position.y);
+    const TruthVar kNuVertexZ = SIMPLETRUTHVAR(position.z);
 
     /*
      * enum genie_interaction_mode_
@@ -72,9 +77,9 @@ namespace ana
         return TruthVar([&](const caf::SRTrueInteractionProxy *nu) -> double {
             double n{0};
             
-            for (auto const prim: nu->prim)
+            for (auto const& prim: nu->prim)
             {
-                const double cryostat{(prim.start.x > 0 ? 1 : 0)};
+                const double cryostat{static_cast<double>(prim.start.x > 0 ? 1 : 0)};
                 if (std::isnan(cryostat) || cryostat < 0)
                     continue;
                 if(std::abs(prim.pdg) == 2212 && prim.plane[cryostat][CALO_PLANE].visE > thr)
