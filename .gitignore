@@ -401,4 +401,6 @@ pyrightconfig.json
 tmp/
 plots/
 
+*.pcm
+
 VertexRepository.code-workspace

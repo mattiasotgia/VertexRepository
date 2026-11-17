@@ -17,7 +17,8 @@ msotgia_mc_2026_pandora_DL_vertex_bnb_numu_stage1_caf_DL_v10_06_00_06p03_caf
 
 ; BNB NuE Standard validation
 msotgia_mc_2026_pandora_DL_vertex_bnb_nue_stage1_caf_Standard_v10_06_00_06p03
-msotgia_mc_2026_pandora_DL_vertex_bnb_nue_stage1_caf_Standard_v10_06_00_06p03_caf
+; msotgia_mc_2026_pandora_DL_vertex_bnb_nue_stage1_caf_Standard_v10_06_00_06p03_caf ;; REDEFINED 
+msotgia_mc_2026_pandora_DL_vertex_bnb_nue_stage1_caf_Standard_v10_06_00_06p03_caf ; This is defined with files matching msotgia%Standard%stage1_????????_0.flat.caf%root
 
 ; BNB NuMu Standard Validation 
 msotgia_mc_2026_pandora_DL_vertex_bnb_numu_stage1_caf_Standard_v10_06_00_06p03
