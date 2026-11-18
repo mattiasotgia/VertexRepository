@@ -1,0 +1,51 @@
+# General
+axes.ymargin: 0.1
+legend.frameon: False
+xaxis.labellocation: right
+yaxis.labellocation: top
+
+axes.formatter.limits: -2, 4
+
+# 2. ax.ticklabel_format(useMathText=True)
+axes.formatter.use_mathtext: True
+
+# 3. ax.minorticks_on()
+xtick.minor.visible: True
+ytick.minor.visible: True
+
+xtick.major.size: 6
+ytick.major.size: 6
+
+xtick.labelsize: 14
+ytick.labelsize: 14
+
+xtick.direction: in
+ytick.direction: in
+
+xtick.top: True
+ytick.right: True
+
+# 2. ax.tick_params(which=minor, length=3, direction=in, right=True, top=True)
+xtick.minor.size: 3
+ytick.minor.size: 3
+
+# Note: Direction, top, and right settings automatically apply to minor ticks 
+# when set globally, but you can explicitly ensure they mirror major ticks.
+xtick.minor.top: True
+ytick.minor.right: True
+
+axes.xmargin: 0.0
+
+legend.title_fontsize: 16
+legend.fontsize: 14
+axes.labelsize: 17
+axes.titlesize: 16
+
+legend.handleheight: 1
+legend.handlelength: 1.2
+
+savefig.dpi: 300
+
+axes.prop_cycle: cycler('color', ['0d49fb', 'e6091c', '26eb47', '8936df', 'fec32d', '25d7fd']) + cycler('linestyle', ['-', '--', '-.', ':', '-', '--'])
+savefig.transparent: True
+savefig.bbox: tight
