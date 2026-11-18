@@ -18,32 +18,32 @@ void ValidateVertex()
 
     std::unique_ptr<TFile> writer(new TFile("../outputs/ValidateVertexWriter_RecoTruth.root", "RECREATE"));
 
-    // Analysis::Analysis<ana::SpillMultiVar> TruthAna("Truth");
+    Analysis::Analysis<ana::SpillMultiVar> TruthAna("Truth");
 
-    // TruthAna.AddDataset("msotgia_mc_2026_pandora_DL_vertex_bnb_nue_stage1_caf_DL_v10_06_00_06p03_caf", "bnb_nue_DL");
-    // TruthAna.AddDataset("msotgia_mc_2026_pandora_DL_vertex_bnb_numu_stage1_caf_DL_v10_06_00_06p03_caf", "bnb_numu_DL");
-    // TruthAna.AddDataset("msotgia_mc_2026_pandora_DL_vertex_bnb_nue_stage1_caf_Standard_v10_06_00_06p03_caf", "bnb_nue_Standard");
-    // TruthAna.AddDataset("msotgia_mc_2026_pandora_DL_vertex_bnb_numu_stage1_caf_Standard_v10_06_00_06p03_caf", "bnb_numu_Standard");
+    TruthAna.AddDataset("msotgia_mc_2026_pandora_DL_vertex_bnb_nue_stage1_caf_DL_v10_06_00_06p03_caf", "bnb_nue_DL");
+    TruthAna.AddDataset("msotgia_mc_2026_pandora_DL_vertex_bnb_numu_stage1_caf_DL_v10_06_00_06p03_caf", "bnb_numu_DL");
+    TruthAna.AddDataset("msotgia_mc_2026_pandora_DL_vertex_bnb_nue_stage1_caf_Standard_v10_06_00_06p03_caf", "bnb_nue_Standard");
+    TruthAna.AddDataset("msotgia_mc_2026_pandora_DL_vertex_bnb_numu_stage1_caf_Standard_v10_06_00_06p03_caf", "bnb_numu_Standard");
 
-    // TruthAna.AddVariable("E", GTV(ana::kTrueE));
-    // TruthAna.AddVariable("InFV", GTV(static_cast<ana::TruthVar>(ana::kVertexInFV)));
-    // TruthAna.AddVariable("IsCC", GTV(ana::kIsCC));
-    // TruthAna.AddVariable("Pdg", GTV(ana::kPdg));
-    // TruthAna.AddVariable("GenieInteractionMode", GTV(ana::kGenieInteractionMode));
-    // TruthAna.AddVariable("NumOfProtons", GTV(ana::kNumOfProtons));
-    // TruthAna.AddVariable("NumOfChargedPions", GTV(ana::kNumOfChargedPions));
-    // TruthAna.AddVariable("NumOfMuons", GTV(ana::kNumOfMuons));
-    // TruthAna.AddVariable("NumOfElectrons", GTV(ana::kNumOfElectrons));
-    // TruthAna.AddVariable("NumOfNeutralPions", GTV(ana::kNumOfNeutralPions));
-    // TruthAna.AddVariable("NumOfPhotons", GTV(ana::kNumOfPhotons));
+    TruthAna.AddVariable("E", GTV(ana::kTrueE));
+    TruthAna.AddVariable("InFV", GTV(static_cast<ana::TruthVar>(ana::kVertexInFV)));
+    TruthAna.AddVariable("IsCC", GTV(ana::kIsCC));
+    TruthAna.AddVariable("Pdg", GTV(ana::kPdg));
+    TruthAna.AddVariable("GenieInteractionMode", GTV(ana::kGenieInteractionMode));
+    TruthAna.AddVariable("NumOfProtons", GTV(ana::kNumOfProtons));
+    TruthAna.AddVariable("NumOfChargedPions", GTV(ana::kNumOfChargedPions));
+    TruthAna.AddVariable("NumOfMuons", GTV(ana::kNumOfMuons));
+    TruthAna.AddVariable("NumOfElectrons", GTV(ana::kNumOfElectrons));
+    TruthAna.AddVariable("NumOfNeutralPions", GTV(ana::kNumOfNeutralPions));
+    TruthAna.AddVariable("NumOfPhotons", GTV(ana::kNumOfPhotons));
     
-    // TruthAna.AddVariable("NuVertexX", GTV(ana::kNuVertexX));
-    // TruthAna.AddVariable("NuVertexY", GTV(ana::kNuVertexY));
-    // TruthAna.AddVariable("NuVertexZ", GTV(ana::kNuVertexZ));
+    TruthAna.AddVariable("NuVertexX", GTV(ana::kNuVertexX));
+    TruthAna.AddVariable("NuVertexY", GTV(ana::kNuVertexY));
+    TruthAna.AddVariable("NuVertexZ", GTV(ana::kNuVertexZ));
 
-    // TruthAna.Go();
+    TruthAna.Go();
 
-    // TruthAna.WriteTo(writer.get());
+    TruthAna.WriteTo(writer.get());
 
     Analysis::Analysis<ana::SpillMultiVar> RecoTruthAna("RecoTruth");
 
